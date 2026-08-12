@@ -1,0 +1,38 @@
+seed: 42
+
+data_path: data/endoscapes_2023/endoscapes
+features_root: data/endoscapes_2023/endoscapes_features
+out_root: outputs/CVSPerceiver_Endoscapes
+exp_tag: PerceiverConcatGate-Endoscapes
+
+temporal_mode: online
+window_size: 15
+fps: 1.0
+frame_stride: null
+label_type: ca
+ft_type: image_embeddings
+pred_threshold: 0.5
+
+epochs: 15
+batch_size: 64
+num_workers: 4
+lr: 1.9208981886801574e-05
+weight_decay: 4.3069559870548926e-05
+dropout: 0.00973397
+no_amp: false
+early_stopping_patience: 5
+
+use_pos_weight: false
+pos_weight: null
+
+n_classes: 3
+d_in: 1024
+d_model: 1024
+nhead: 16
+num_layers: 2
+dim_ff: 512
+K: 64
+pe_max_len: 2048
+mlp_hidden: 128
+pe_type: learned
+mult: false

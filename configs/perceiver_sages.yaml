@@ -1,0 +1,35 @@
+seed: 42
+
+data_path: data/SAGES_2024
+out_root: outputs/CVSPerceiver_SAGES
+exp_tag: best_perceiver_repro
+
+temporal_mode: online
+window_size: 15
+fps: 1.0
+label_type: ca
+pred_threshold: 0.5
+
+epochs: 15
+batch_size: 64
+num_workers: 4
+lr: 1.1051578958647711e-05
+weight_decay: 0.0004173579879622136
+dropout: 0.009733969709363743
+no_amp: false
+early_stopping_patience: 5
+
+use_pos_weight: true
+pos_weight: null
+
+n_classes: 3
+d_in: 1024
+d_model: 1024
+nhead: 16
+num_layers: 2
+dim_ff: 512
+K: 64
+pe_max_len: 2048
+mlp_hidden: 128
+pe_type: learned
+mult: false

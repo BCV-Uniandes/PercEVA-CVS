@@ -1,0 +1,43 @@
+seed: 42
+exp_tag: End2End-Endoscapes
+
+data_path: data/endoscapes_2023/endoscapes
+out_root: outputs/End2End_Endoscapes
+
+model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+img_size: 448
+encoder_pretrained: true
+encoder_ckpt: weights/eva02_enc_endoscapes/model.safetensors
+unfreeze_blocks: 4
+
+d_model: 1024
+nhead: 16
+num_layers: 2
+dim_ff: 512
+dropout: 0.009733969709363743
+K: 64
+mlp_hidden: 128
+mult: false
+pe_type: learned
+pe_max_len: 2048
+
+num_classes: 3
+temporal_mode: online
+window_size: 15
+fps: 1.0
+frame_stride: null
+label_type: ca
+pred_threshold: 0.5
+
+epochs: 15
+batch_size: 4
+num_workers: 2
+lr: 5.571381587992538e-06
+encoder_lr: 2.7427601690401205e-07
+weight_decay: 2.5296790250238497e-05
+no_amp: false
+early_stopping_patience: 8
+gradient_accumulation_steps: 2
+
+use_pos_weight: true
+pos_weight: null

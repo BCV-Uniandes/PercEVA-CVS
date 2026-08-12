@@ -1,0 +1,22 @@
+seed: 42
+exp_tag: EVA02
+
+data_path: data/SAGES_2024
+out_root: outputs/Eva02
+
+model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+img_size: 448
+num_classes: 3
+
+epochs: 8
+batch_size: 8
+num_workers: 8
+
+lr: 0.0001
+weight_decay: 0.05
+no_amp: false
+
+step_size: 3
+gamma: 0.1
+
+test_threshold: 0.5

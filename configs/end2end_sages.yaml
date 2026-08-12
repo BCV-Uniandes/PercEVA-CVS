@@ -1,0 +1,44 @@
+seed: 1
+exp_tag: End2End-SAGES
+
+data_path: data/SAGES_2024
+out_root: outputs/End2End_SAGES
+
+model_name: eva02_large_patch14_448.mim_m38m_ft_in22k_in1k
+img_size: 448
+encoder_pretrained: true
+encoder_ckpt: weights/eva02_enc_sages_seed1_warmstart.safetensors
+unfreeze_blocks: 4
+
+d_model: 1024
+nhead: 16
+num_layers: 2
+dim_ff: 512
+dropout: 0.009733969709363743
+K: 64
+mlp_hidden: 128
+mult: false
+pe_type: learned
+pe_max_len: 2048
+
+num_classes: 3
+temporal_mode: online
+window_size: 15
+fps: 1.0
+frame_stride: null
+label_type: ca
+pred_threshold: 0.5
+border_padding: keyframe
+
+epochs: 15
+batch_size: 8
+num_workers: 4
+lr: 1.3474266330808778e-05
+encoder_lr: 1.2657134762878895e-06
+weight_decay: 2.2615369176073964e-05
+no_amp: false
+early_stopping_patience: 5
+gradient_accumulation_steps: 2
+
+use_pos_weight: true
+pos_weight: null
