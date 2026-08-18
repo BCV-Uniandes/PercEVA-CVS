@@ -2,7 +2,7 @@
 
 # Annotation-Efficient Critical View of Safety Assessment with Vision Foundation Models
 
-**Sergio Andrés Cañar Lozano · Javier Santiago Vera Rincón · Isabel Sofía Tovar Sánchez · Pablo Arbeláez**
+**Sergio Cañar · Javier Santiago Vera Rincón · Isabel Sofía Tovar Sánchez · Pablo Arbeláez**
 
 Universidad de los Andes, Bogotá, Colombia
 `{s.canar, j.verar, i.tovars, pa.arbelaez}@uniandes.edu.co`
