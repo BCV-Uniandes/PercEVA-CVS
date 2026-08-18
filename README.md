@@ -8,8 +8,7 @@ Universidad de los Andes, Bogotá, Colombia
 `{s.canar, j.verar, i.tovars, pa.arbelaez}@uniandes.edu.co`
 
 [![Paper](https://img.shields.io/badge/Paper-SafeSurg%202026-b31b1b.svg)](https://github.com/BCV-Uniandes/PercEVA-CVS)
-[![Python](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.10-ee4c2c.svg)](https://pytorch.org/)
+[![Project Page](https://img.shields.io/badge/Project-Page-blue.svg)](https://sergiocanar.github.io/perceva-cvs-page/)
 
 Official implementation of **Annotation-Efficient Critical View of Safety Assessment with Vision Foundation Models**, accepted as an **oral presentation** at the
 MICCAI 2026 SafeSurg Workshop.
@@ -113,14 +112,13 @@ pip install --index-url https://download.pytorch.org/whl/cu130 \
 pip install -r requirements.txt
 ```
 
-> [!IMPORTANT]
-> On shared multi-GPU machines, **always pin a GPU** before running anything here. Every
-> script uses the Hugging Face `Trainer`, which otherwise wraps the model across *all* visible
-> GPUs:
->
-> ```bash
-> CUDA_VISIBLE_DEVICES=0 python ...
-> ```
+On shared multi-GPU machines, **always pin a GPU** before running anything here. Every
+script uses the Hugging Face `Trainer`, which otherwise wraps the model across *all* visible
+GPUs:
+
+```bash
+CUDA_VISIBLE_DEVICES=0 python ...
+```
 
 ---
 
@@ -251,16 +249,14 @@ python main_scripts/main_e2e.py --dataset endoscapes --config configs/end2end_en
 packaged checkpoints — run as `bash run_scripts/<name>.sh`. All write outputs under
 `outputs/`, logging locally only (`training.log` + metrics JSON).
 
-> [!NOTE]
-> The paper's mean ± std results are averaged over three seeds: **42, 1, 2**. Pass `--seed` to
-> override any config's default and reproduce a specific one.
+The paper's mean ± std results are averaged over three seeds: **42, 1, 2**. Pass `--seed` to
+override any config's default and reproduce a specific one.
 
 ---
 
 ## Pre-trained Weights
 
-> [!NOTE]
-> Pre-trained checkpoints matching the paper's reported numbers **will be released soon.**
+Pre-trained checkpoints matching the paper's reported numbers **will be released soon.**
 
 ---
 
@@ -285,9 +281,8 @@ Writes predictions + metrics under `<model_path>/infer__<split>/`
 (`preds/{split}_predictions.json`, `{split}_fast_metrics.json`, `{split}_full_metrics.json`,
 `run_info.json`).
 
-> [!NOTE]
-> There's no separate E2E inference script — E2E training already runs val/test prediction and
-> metrics at the end.
+There's no separate E2E inference script — E2E training already runs val/test prediction and
+metrics at the end.
 
 ---
 
