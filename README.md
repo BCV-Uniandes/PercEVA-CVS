@@ -100,6 +100,7 @@ boxes/masks — see the paper for full details and citations.
 - [Inference](#inference)
 - [Acknowledgments](#acknowledgments)
 - [Citation](#citation)
+- [License](#license)
 
 ---
 
@@ -309,6 +310,12 @@ If you find this work useful, please consider citing:
   publisher = {Springer}
 }
 ```
+
+---
+
+## License
+
+This work is licensed under [CC BY-NC-SA 4.0](LICENSE.md).
 
 ---
 
