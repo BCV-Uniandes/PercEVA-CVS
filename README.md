@@ -135,7 +135,7 @@ Available on the Hugging Face Hub under
 (CC BY-NC 4.0):
 
 ```bash
-huggingface-cli download CAMMA-public/SAGES_CVS_Challenge_2024 \
+hf download CAMMA-public/SAGES_CVS_Challenge_2024 \
     --repo-type dataset --local-dir data/SAGES_2024
 ```
 
